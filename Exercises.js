@@ -320,11 +320,76 @@ function repeatStr(n, s) {
 
 // ---------------------------------------------------------------------- //
 
-// ---------------------------------------------------------------------- //
+// Write a function that expects an array of integers and returns another function that expects as parameter any function that can do something with the sum of the original array of integers.
+
+function ejemplo(fn) {
+    var integer = [1, 2, 3];
+    fn(integer);
+}
+
+ejemplo(function (int) {
+    sum = int.reduce((a, b) => a + b, 0);
+})
+console.log(sum)
 
 // ---------------------------------------------------------------------- //
 
+// Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+
+function isDivisible(n, x, y) {
+    return n % x === 0 && n % y === 0
+}
+
 // ---------------------------------------------------------------------- //
+
+// The first input array is the key to the correct answers to an exam, like ["a", "a", "b", "d"]. The second one contains a student's submitted answers.
+// The two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer, represented as an empty string (in C the space character is used).
+// If the score < 0, return 0.
+// For example:
+// checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]) → 6
+// checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]) → 7
+// checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
+// checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
+
+
+function checkExam(array1, array2) {
+    var score = 0;
+    for (var i = 0; i < array2.length; i++) {
+        if (array2[i] === "") {
+            score += 0
+        } else if (array1[i] === array2[i]) {
+            score += 4
+        } else if (array1[i] !== array2[i]) {
+            score -= 1
+        }
+    }
+    if (score >= 0) {
+        return score;
+    } else {
+        return 0
+    }
+}
+
+function checkExam(arr1, arr2) {
+    let result = arr2.reduce((c, el, i) => el.length ? (el == arr1[i] ? c + 4 : c - 1) : c, 0);
+    return result < 0 ? 0 : result;
+}
+// ---------------------------------------------------------------------- //
+
+// In this simple exercise, you will build a program that takes a value, integer, and returns a list of its multiples up to another value, limit. If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+
+// If you can, try writing it in only one line of code.
+
+function findMultiples(int, limit) {
+    let result = []
+
+    for (let i = int; i <= limit; i += int)
+        result.push(i)
+
+    return result
+}
 
 // ---------------------------------------------------------------------- //
 
