@@ -425,6 +425,67 @@ function warnTheSheep(queue) {
 
 // ---------------------------------------------------------------------- //
 
+// Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+
+// The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+// setAlarm(true, true) -> false setAlarm(false, true) -> false setAlarm(false, false) -> false setAlarm(true, false) -> true
+
+// setalarm(true, true) -> false
+// setalarm(false, true) -> false
+// setalarm(false, false) -> false
+// setalarm(true, false) -> true
+
+function setAlarm(employed, vacation) {
+    return employed && !vacation;
+}
+
+// ---------------------------------------------------------------------- //
+
+// The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+
+// For example:
+
+// cockroachSpeed(1.08) == 30
+// Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
+
+function cockroachSpeed(s) {
+    //multiply km/m by 27.7777777778
+    return Math.floor(s * 27.7777777778);
+}
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
+// ---------------------------------------------------------------------- //
+
 // ---------------------------------------------------------------------- //
 
 // ---------------------------------------------------------------------- //
